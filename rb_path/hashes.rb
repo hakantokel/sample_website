@@ -4,8 +4,7 @@
 # #'kemal'i degistirelim.
 # names['kemal'] = 'mehmet'
 
-
-# # Hata var midir? Var ise Dogrusu?
+# #Hata?
 
 # #Cozum 
 # names[1] = 'mehmet'
@@ -13,32 +12,51 @@
 # #Cozum 
 # names[names.index('kemal')] = 'mehmet'
 
-# ##################################
+# ########################################
 
 # sozluk = { 'array' => 'dizi', 'string' => 'dizgi' }
 
 # puts sozluk.size  
 # #=> 2
-# #size, Array'den hatirliyorum. length calisir mi?
+# #length?
 
-
-# puts dictionary['array']
+# puts sozluk['array']
 # #=> dizi
 
 # sozluk['string'] = 'katar'
 # #sozluk = { 'array' => 'dizi', 'string' => 'katar' }
 
-# ########################################
+# sozluk['def'] = 'metot'
+# #{"array"=>"dizi", "string"=>"katar", "def"=>"metot"}
 
+# sozluk[0] = 'saymaya 0\'dan basliyoruz'
+# #{"array"=>"dizi", "string"=>"katar", "def"=>"metot", 
+# #	0=>"saymaya 0'dan basliyoruz"}
 
+# sozluk.delete('array') #<--Parantez'e dikkat
+# #{"string"=>"katar", "def"=>"metot", 0=>"saymaya 0'dan basliyoruz"}
 
+# sozluk.each {|key,value| puts "#{key}-#{value}"}
+# #string-dizgi
+# #def-metot
+# #0-saymaya 0'dan basliyoruz
 
+# sozluk.each_key {|key| print key.to_s + ", "}
 
+# #each_value deneyin
 
+# p sozluk.has_key?('string')
+# #=> true
 
-# ########################################
+# #{'string' => nil} olsaydi? has_key?
 
-# #kullanisli gelmedi mi?  
+#default value eklenebilir.
+h = Hash.new(0)
+p h[1]
+p h["bir sayi"]
+puts h
+
+########################################
 
 # ogrenciler = {
 #   'aekinci' => {
@@ -70,49 +88,6 @@
 # puts ogrenciler['yhas']['aldigi dersler'].join(', ')
 # #=> Coğrafya, Türkçe, Matematik
 
-
-# ########################################
-
-
-
-
-
-
-
-
-
-
-
-# sozluk = { 'array' => 'dizi', 'string' => 'dizgi' }
-
-# sozluk['def'] = 'metot'
-# #{"array"=>"dizi", "string"=>"dizgi", "def"=>"metot"}
-
-# sozluk[0] = 'saymaya 0\'dan basliyoruz'
-# #{"array"=>"dizi", "string"=>"dizgi", "def"=>"metot", 
-# # 0=>""saymaya 0'dan basliyoruz""}
-
-
-# sozluk.delete('array') #<--Parantez'e dikkat
-# #{"string"=>"dizgi", "def"=>"metot", 0=>"ilk dizi elemani"}
-
-# sozluk.each {|key,value| puts "#{key}-#{value}"}
-# #string-dizgi
-# #def-metot
-# #0-saymaya 0'dan basliyoruz
-
-# sozluk.each_key {|key| print key.to_s + ", "}
-
-# #each_value deneyin
-
-# p sozluk.has_key?('string')
-# #=> true
-
-# #{'string' => nil} olsaydi? has_key?
-
-
-
-
 ########################################
 
 # #Bir dizide verilen kelimelerin frekansı
@@ -140,32 +115,27 @@
 # p say
 # #{"kedi"=>3, "Matematik"=>1, "masa"=>2, "elma"=>1, "bahce"=>2}
 
-
-# #Alistirma: Siralayabilir misiniz?
-
-
 # siralanmis = say.sort_by {|kelime , adet| adet}.reverse 
 # p siralanmis
 # #[["kedi", 3], ["bahce", 2], ["masa", 2], ["elma", 1], ["Matematik", 1]]
   
-# #ekrana yazalim
 # siralanmis.each do |dizi, deger| 
 #   puts "#{dizi}:  #{deger}"
 # end
 
 
-# #Alistirma: kelime frekansi bir metot ile 
+# #Frekans bir metot ile 
 
 # def frekans(arr)
 #   say = {}
-#   arr.each {|kel| say.has_key?(kel)? say[kel] +=1 : say[kel] = 1 }
+#   arr.each {|kel| say.has_key?(kel)? say[kel] += 1 : say[kel] = 1 }
 #   say #olmasaydi? 
 # end
 
 # puts frekans dizi
 # #=> {"kedi"=>3, "Matematik"=>1, "masa"=>2, "elma"=>1, "bahce"=>2}
 
-# #Alistirma: dizi yerine bir string olsaydi? 
+# #dizi yerine bir string olsaydi? 
 
 # str = dizi.join(" ")
 # # "kedi Matematik masa elma bahce kedi bahce kedi masa"
@@ -178,9 +148,7 @@
 # puts frekans dizi2
 # #=> {"kedi"=>3, "matematik"=>1, "masa"=>2, "elma"=>1, "bahce"=>2}
 
-# ########################################
-
-
+# #######################################
 
 
 # #bazi hashler
@@ -232,13 +200,11 @@
 
 # ########################################
 
-
 # #Anagram kelimeler
 
 # words =  ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
 #           'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
 #           'flow', 'neon']
-
 
 # result = {}
 
@@ -260,8 +226,6 @@
 # #=> ["tied", "diet", "edit", "tide"]
 # #=> ["evil", "live", "veil", "vile"]
 # #=> ["fowl", "wolf", "flow"]
-
-
 
 # ########################################
 
