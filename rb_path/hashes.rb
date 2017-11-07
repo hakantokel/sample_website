@@ -14,6 +14,28 @@
 
 # ########################################
 
+# sozluk_dizi = []
+# sozluk_hash = {}
+# sozluk_dizi[0] = 'dizi'
+# sozluk_dizi[1] = 'dizgi'
+# sozluk_dizi[2] = 'metot'
+# sozluk_dizi[3] = 'nesne'
+# sozluk_hash['array'] = 'dizi'
+# sozluk_hash['string' ] = 'dizgi'
+# sozluk_hash['def'] = 'metot'
+# sozluk_hash['object'] = 'nesne'
+
+# sozluk_dizi.each do |kelime|
+#   puts kelime
+# end
+
+# sozluk_hash.each do |anahtar, deger|
+#   puts "#{anahtar}: #{deger}"
+# end
+
+
+
+
 # sozluk = { 'array' => 'dizi', 'string' => 'dizgi' }
 
 # puts sozluk.size  
@@ -50,11 +72,19 @@
 
 # #{'string' => nil} olsaydi? has_key?
 
-#default value eklenebilir.
-h = Hash.new(0)
-p h[1]
-p h["bir sayi"]
-puts h
+#default value 
+
+# dersnot = {}
+# dersnot.default = 0
+# #dersnot = Hash.new("0")
+
+# dersnot['Matematik'] = 50
+# dersnot['Tarih'] = 70
+# dersnot['Fizik'] = 75
+# print "Lutfen Ders seciniz:"
+# ders = gets.chomp
+# puts " #{ders} notu: #{dersnot[ders]}"
+
 
 ########################################
 
