@@ -120,6 +120,23 @@
 
 ########################################
 
+# hash = {"kalem" => 4, "silgi" => 1 , "defter" => 3}
+# p hash.sort
+# # =>[["defter", 3], ["kalem", 4], ["silgi", 1]]
+# p hash.sort.to_h
+# # Hash[hash.sort]
+# # =>{"defter"=>3, "kalem"=>4, "silgi"=>1}
+
+# p hash.sort_by{|k,v| k}.to_h
+# # =>{"defter"=>3, "kalem"=>4, "silgi"=>1}
+
+# p hash.sort_by{|k,v| v}.to_h
+# # =>{"kalem"=>4, "defter"=>3, "silgi"=>1}
+
+# #reverse?
+
+##########################################
+
 # #Bir dizide verilen kelimelerin frekansı
 
 # dizi = ['kedi','Matematik','masa','elma.',
