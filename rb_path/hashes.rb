@@ -1,6 +1,5 @@
-
 # #names bir dizidir.
-# names = ['yusuf','kemal', 'bekir','ayşe']
+# names = ['yusuf','kemal', 'bekir','ahmet']
 # #'kemal'i degistirelim.
 # names['kemal'] = 'mehmet'
 
@@ -13,6 +12,28 @@
 # names[names.index('kemal')] = 'mehmet'
 
 # ########################################
+
+# sozluk_dizi = []
+# sozluk_hash = {}
+# sozluk_dizi[0] = 'dizi'
+# sozluk_dizi[1] = 'dizgi'
+# sozluk_dizi[2] = 'metot'
+# sozluk_dizi[3] = 'nesne'
+# sozluk_hash['array'] = 'dizi'
+# sozluk_hash['string' ] = 'dizgi'
+# sozluk_hash['def'] = 'metot'
+# sozluk_hash['object'] = 'nesne'
+
+# sozluk_dizi.each do |kelime|
+#   puts kelime
+# end
+
+# sozluk_hash.each do |anahtar, deger|
+#   puts "#{anahtar}: #{deger}"
+# end
+
+
+
 
 # sozluk = { 'array' => 'dizi', 'string' => 'dizgi' }
 
@@ -50,13 +71,20 @@
 
 # #{'string' => nil} olsaydi? has_key?
 
-#default value eklenebilir.
-h = Hash.new(0)
-p h[1]
-p h["bir sayi"]
-puts h
+# #default value 
+# dersnot = {}
+# dersnot.default = 0
+# #dersnot = Hash.new(0)
 
-########################################
+# dersnot['Matematik'] = 50
+# dersnot['Tarih'] = 70
+# dersnot['Fizik'] = 75
+# print "Lutfen Ders seciniz:"
+# ders = gets.chomp
+# puts " #{ders} notu: #{dersnot[ders]}"
+
+
+# ########################################
 
 # ogrenciler = {
 #   'aekinci' => {
@@ -75,7 +103,6 @@ puts h
 # }
 
 # #aekinci'nin yasina ulasmak istersem
-
 # puts ogrenciler['aekinci']['yas']
 # #=> 23
 
@@ -88,7 +115,24 @@ puts h
 # puts ogrenciler['yhas']['aldigi dersler'].join(', ')
 # #=> Coğrafya, Türkçe, Matematik
 
-########################################
+# ########################################
+
+# hash = {"kalem" => 4, "silgi" => 1 , "defter" => 3}
+# p hash.sort
+# # =>[["defter", 3], ["kalem", 4], ["silgi", 1]]
+# p hash.sort.to_h
+# # Hash[hash.sort]
+# # =>{"defter"=>3, "kalem"=>4, "silgi"=>1}
+
+# p hash.sort_by{|k,v| k}.to_h
+# # =>{"defter"=>3, "kalem"=>4, "silgi"=>1}
+
+# p hash.sort_by{|k,v| v}.to_h
+# # =>{"kalem"=>4, "defter"=>3, "silgi"=>1}
+
+# #reverse?
+
+# ##########################################
 
 # #Bir dizide verilen kelimelerin frekansı
 
@@ -119,8 +163,8 @@ puts h
 # p siralanmis
 # #[["kedi", 3], ["bahce", 2], ["masa", 2], ["elma", 1], ["Matematik", 1]]
   
-# siralanmis.each do |dizi, deger| 
-#   puts "#{dizi}:  #{deger}"
+# siralanmis.each do |ilk, son| 
+#   puts "#{ilk}:  #{son}"
 # end
 
 
@@ -178,6 +222,7 @@ puts h
 # ########################################
 
 # #bazı metodlar
+
 # keys
 # values
 # each
@@ -202,25 +247,29 @@ puts h
 
 # #Anagram kelimeler
 
-# words =  ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
-#           'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
-#           'flow', 'neon']
+words =  ['demo', 'none', 'tied', 'evil', 'dome', 'mode', 'live',
+          'fowl', 'veil', 'wolf', 'diet', 'vile', 'edit', 'tide',
+          'flow', 'neon']
 
-# result = {}
+#words.group_by { |word| word.chars.sort }.values
 
-# words.each do |word|
-#   key = word.split('').sort.join 
-#   if result.has_key?(key)
-#     result[key].push(word) #?
-#   else
-#     result[key] = [word] # key => [word1,word2]
-#   end
-# end
+result = {}
 
-# result.each do |k, v|
-#   # puts "------"
-#   p v
-# end
+words.each do |word|
+  key = word.split('').sort.join 
+  if result.has_key?(key)
+    result[key].push(word) #?
+  else
+    result[key] = [word] # key => [word1,word2]
+  end
+end
+
+result.each do |k, v|
+  # puts "------"
+  p v
+end
+p result.keys.to_a
+p result.values.to_a
 # #=> ["demo", "dome", "mode"]
 # #=> ["none", "neon"]
 # #=> ["tied", "diet", "edit", "tide"]
@@ -231,29 +280,7 @@ puts h
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # #hashlerin farki nedir?
-
-
 # x = "hi there"
 # my_hash = {x: "some value"}
 # my_hash2 = {x => "some value"}
