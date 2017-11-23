@@ -62,7 +62,7 @@
 # #def-metot
 # #0-saymaya 0'dan basliyoruz
 
-# sozluk.each_key {|key| print key.to_s + ", "}
+# sozluk.each_key {|key| print key.to_s + ", "} #key, ", "
 
 # #each_value deneyin
 
