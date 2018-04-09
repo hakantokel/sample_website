@@ -1,25 +1,30 @@
-# RVM >-------------------------------------------------------------
-
-
+# RVM 
 ============================================
 > ### Bu sayfa RVM in nasil kurulacagini anlatiyor
 https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-14-04-using-rvm
 
 
-> #### rvm yuklendikten sonra 
+> **_rvm yuklendikten sonra_** 
 
-`` /etc/groups `` 
+> `` /etc/groups `` 
 
->icinde rvm in yanina kullanici adi yazilmasi gerekiyor
+>_icinde rvm in yanina kullanici adi yazilmasi gerekiyor_
 
 `` rvm:x:1003:vagrant:hakan ``
->gibi.
+>_gibi._
 
 ================================================
 
-```bash
-#rvm install 2.3.1
+
+```console
+#rvm install 2.3.1 
+
+$rvm list
+
+$rvm use 2.4.1
 ```
 
+
+
 :rocket:
-# RVM <-------------------------------------------------------------
+# RVM
