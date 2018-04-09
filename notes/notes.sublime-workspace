@@ -1,0 +1,355 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"attr",
+				"attr_reader"
+			],
+			[
+				"P",
+				"Product"
+			],
+			[
+				"met",
+				"method_reference"
+			],
+			[
+				"test",
+				"test_data"
+			],
+			[
+				"peo",
+				"person"
+			],
+			[
+				"C",
+				"CSV"
+			],
+			[
+				"phone",
+				"phone_re"
+			],
+			[
+				"Com",
+				"Company"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"articl",
+				"article_params"
+			],
+			[
+				"click",
+				"click_button"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"par",
+				"par1"
+			],
+			[
+				"any",
+				"any_method"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Install Package Control"
+			],
+			[
+				"syntax ruby",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 461.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/hakan/Documents/notes/notes",
+		"/home/hakan/Documents/vgrnt/deneme/Gem",
+		"/home/hakan/Documents/vgrnt/deneme/gem",
+		"/home/hakan/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20180126.0.0/virtualbox/Vagrantfile",
+		"/media/hakan/sandisk480g/Programlama/vagrant/vagrant_box_files/leopard-VAGRANTSLASH-rwtrusty64/1.0.0/virtualbox/Vagrantfile",
+		"/media/hakan/sandisk480g/Programlama/vagrant/vagrant_box_files/hashicorp-VAGRANTSLASH-precise64/1.1.0/virtualbox/Vagrantfile",
+		"/media/hakan/sandisk480g/Programlama/vagrant/vagrant_box_files/precise64/0/virtualbox/Vagrantfile",
+		"/media/hakan/sandisk480g/Programlama/vagrant/vagrant_box_files/techbytes-VAGRANTSLASH-rails5ubuntu/1.0.0.0/virtualbox/Vagrantfile",
+		"/media/hakan/sandisk480g/Programlama/vagrant/vagrant_box_files/ubuntu-VAGRANTSLASH-trusty64/20170330.0.1/virtualbox/Vagrantfile",
+		"/media/hakan/sandisk480g/Programlama/vagrant/vagrant_box_files/ubuntu-VAGRANTSLASH-xenial64/20170317.0.0/virtualbox/Vagrantfile",
+		"/media/hakan/sandisk480g/Programlama/vagrant/vagrant_box_files/ubuntu-VAGRANTSLASH-xenial64/20170327.0.0/virtualbox/Vagrantfile",
+		"/home/hakan/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20170327.0.0/virtualbox/Vagrantfile",
+		"/home/hakan/.vagrant.d/boxes/leopard-VAGRANTSLASH-rwtrusty64/1.0.0/virtualbox/include/_Vagrantfile",
+		"/home/hakan/.vagrant.d/boxes/precise64/0/virtualbox/Vagrantfile",
+		"/home/hakan/.vagrant.d/boxes/leopard-VAGRANTSLASH-rwtrusty64/1.0.0/virtualbox/vagrant_private_key",
+		"/home/hakan/.vagrant.d/setup_version",
+		"/home/hakan/.vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20180126.0.0/virtualbox/ubuntu-xenial-16.04-cloudimg.mf",
+		"/home/hakan/Downloads/linux(2).sh",
+		"/home/hakan/Documents/vgrnt/Vagrantfile",
+		"/home/hakan/.vagrant.d/boxes/hashicorp-VAGRANTSLASH-precise64/1.1.0/virtualbox/Vagrantfile",
+		"/home/hakan/Documents/deneme.rb",
+		"/home/hakan/Documents/prog-dene/deneme.rb",
+		"/home/hakan/Documents/ab2018/ders-01.html",
+		"/home/hakan/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/hakan/Documents/denemeler/deneme.rb",
+		"/home/hakan/Documents/repos/sample_website/rb_path/hashes.rb",
+		"/home/hakan/Documents/repos/sample_website/rb_path/cekilis.rb",
+		"/home/hakan/Documents/repos/sample_website/index.html",
+		"/home/hakan/Downloads/linux.sh",
+		"/home/hakan/Downloads/linux(1).sh",
+		"/home/hakan/Documents/denemeler/index.html",
+		"/media/hakan/sandisk480g/Programlama/ruby/örnekler/kaprekar_sayi.rb",
+		"/home/hakan/Documents/lyk/padawan/app/models/tag.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/views/comments/_form2.html.erb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/models/user.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/controllers/users_controller.rb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/config/routes.rb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/spec/models/user_spec.rb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/app/views/layouts/application.html.erb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/app/views/users/new.html.erb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/app/controllers/users_controller.rb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/app/models/user.rb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/db/migrate/20170730160155_rename_column_to_password_digest_in_users.rb",
+		"/home/hakan/Documents/lyk/rails/rails/lyk2017_journal/Gemfile",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/spec/models/user_spec.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/spec/models/post_spec.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/spec/models/like_spec.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/models/post.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/models/like.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/db/migrate/20170730085615_create_likes.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/models/profile.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/db/migrate/20170730072333_posts_tags_join_table.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/db/migrate/20170729132530_create_posts.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/db/migrate/20170729142656_create_comments.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/spec/models/tag_spec.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/models/tag.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/app/models/comment.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/config/environments/test.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/db/migrate/20170730072243_create_post_tags.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/spec/models/comment_spec.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/spec/models/profile_spec.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/spec/rails_helper.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017-blog-master/app/controllers/articles_controller.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017-blog-master/db/migrate/20170727071945_create_products.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017-blog-master/app/models/product.rb",
+		"/home/hakan/Documents/lyk/rails/lyk2017-blog-master/db/schema.rb",
+		"/home/hakan/Documents/lyk/git/my_first_git_repo/index.html",
+		"/home/hakan/Documents/lyk/rails/lyk2017_journal/index.html",
+		"/home/hakan/Documents/lyk/sirala.rb",
+		"/home/hakan/Documents/lyk/kac_adet.rb",
+		"/home/hakan/Documents/lyk/cities.csv",
+		"/home/hakan/Documents/lyk/uzunluk_bulucu.rb",
+		"/home/hakan/Documents/lyk/proc.rb",
+		"/home/hakan/Documents/lyk/2_plndrm.rb",
+		"/home/hakan/Documents/lyk/calisdosya.rb",
+		"/home/hakan/Documents/lyk/plndrm.rb",
+		"/home/hakan/Documents/lyk/calc.rb",
+		"/home/hakan/Documents/lyk/haricidosya.rb",
+		"/home/hakan/Documents/lyk/calc"
+	],
+	"find":
+	{
+		"height": 21.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "notes.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"postre",
+				"spec/features/post_related_features_spec.rb"
+			],
+			[
+				"postrlt",
+				"spec/features/post_related_features_spec.rb"
+			],
+			[
+				"rous",
+				"config/routes.rb"
+			],
+			[
+				"sess",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"usercn",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"user_s",
+				"spec/models/user_spec.rb"
+			],
+			[
+				"renam",
+				"db/migrate/20170730160155_rename_column_to_password_digest_in_users.rb"
+			],
+			[
+				"tesr",
+				"config/environments/test.rb"
+			],
+			[
+				"spec",
+				"spec/models/tag_spec.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 124.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 527.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
