@@ -14,7 +14,7 @@ $ ssh-keygen
 $ git remote -v 
 ```
 
-> o klasorun icerisinde ki url ile veya http ile baslayan (fetch pull) adreslerini gosterecek.
+> o klasorun icerisinde ki url ile veya http ile baslayan (fetch pull) adreslerini gosterecek. ciktisi.
 
 ```console
 origin  git@github.com:hakantokel/sample_website.git (fetch)
@@ -24,6 +24,28 @@ origin  git@github.com:hakantokel/sample_website.git (push)
 > gibi. Gerci bu ssh icin ayarli olan url adresi. ``.git/config`` icerisinde bunu gorebilirsin. 
 
 ============================================
+> ### Configrasyon icerigini gormek
+
+```console
+$ got config --list
+```
+bu soyle bir cikti verir. (Tabi komut proje icerisinde yazilmali)
+
+```console
+user.name=htokel
+user.email=hakantokel@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:hakantokel/sample_website.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+branch.gh-pages.remote=origin
+branch.gh-pages.merge=refs/heads/gh-pages
+```
+
 # Git
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -31,6 +53,8 @@ origin  git@github.com:hakantokel/sample_website.git (push)
 # Linux
 ============================================
 > ### Acilista root haklari ile komut satiri 
+
+Normalde Ubuntu’da ``Startup Applications`` uygulaması ile ekleyerek veya ``.bashrc`` betiğine ekleyerek bir komutun başlangıçta çalışmasını sağlamak mümkün. Ancak çalışmasını istediğimiz komut sudo yetkisi istiyorsa iş değişik.
 
 `` /etc/rc.local``
 
@@ -40,7 +64,7 @@ origin  git@github.com:hakantokel/sample_website.git (push)
 ntfsfix /dev/sdXY
 ```
 
-> eklemistim baslangicta calisti
+> eklemistim baslangicta calisti ve hhd yi mount etti
 
 ============================================
 
