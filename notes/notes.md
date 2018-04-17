@@ -23,6 +23,14 @@ origin  git@github.com:hakantokel/sample_website.git (push)
 
 > gibi. Gerci bu ssh icin ayarli olan url adresi. ``.git/config`` icerisinde bunu gorebilirsin. 
 
+> Bunu console dan eklemek istersen
+
+```console
+git remote add origin git@github.com:hakantokel/sample_website.git
+```
+
+> seklinde olmali.
+
 ============================================
 > ### Configrasyon icerigini gormek
 
