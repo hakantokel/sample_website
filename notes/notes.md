@@ -54,6 +54,47 @@ branch.gh-pages.remote=origin
 branch.gh-pages.merge=refs/heads/gh-pages
 ```
 
+============================================
+> ### Promt ta git gosterimi
+
+n this section, we’ll add two final advanced customizations. First, we’ll arrange for the command-line prompt to include the name of the current branch. Second, we’ll add the ability to fill in Git branch names using tab completion, which is especially convenient when dealing with longer branch names. Both of these features come as shell scripts with the Git source code distribution, which can be downloaded as shown in Listing 31.
+Listing 31: Downloading scripts for branch display and tab completion.
+```console
+$ curl -o ~/.git-prompt.sh       -OL cdn.learnenough.com/git-prompt.sh
+$ curl -o ~/.git-completion.bash -OL cdn.learnenough.com/git-completion.bash
+```
+
+Here the -o flag arranges to save the files locally under slightly different names from the ones on the server, prepending a dot . so that the files are hidden and saving them in the home directory ~.
+After downloading the scripts as in Listing 31, on some systems we need to make them executable, which we can do with the chmod command (mentioned before in Learn Enough Text Editor to Be Dangerous):
+```console
+$ chmod +x ~/.git-prompt.sh
+$ chmod +x ~/.git-completion.bash
+```
+
+Next, we need to tell the shell about the new commands, so open up the Bash profile file in your favorite editor (which for simplicity I’ll assume is Atom):
+```console
+$ vim ~/.bashrc
+```
+
+Then add the configuration shown in Listing 32 to the bottom of the file. Also, make sure to delete any other lines starting with PS1 (which you’ll have to do if you modified .bash_profile as shown in Learn Enough Text Editor to Be Dangerous).
+Listing 32: Git configuration in the .bash_profile file. ~/.bash_profile
+.
+.
+.
+
+```bash
+# Git configuration
+# Branch name in prompt
+source ~/.git-prompt.sh
+PS1='[\[\e[0;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[0;34m\]%s\[\e[m\])")]\[\e[1;36m\]\$\[\e[m\] '
+#PS1='[\W$(__git_ps1 " (%s)")]\$ '
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+# Tab completion for branch names
+source ~/.git-completion.bash
+```
+
+============================================
+
 # Git
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -126,6 +167,7 @@ sudo fc-cache -fv
 
 ```
 
+============================================
 
 # Linux
 
