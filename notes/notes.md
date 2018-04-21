@@ -108,6 +108,24 @@ $ pdftk *.pdf cat output newfile.pdf
 ```
 
 ============================================
+> ###  install_monaco_font
+
+```console
+cd /usr/share/fonts/truetype/
+
+#TODO: put validation if folder already exists
+sudo mkdir ttf-monaco
+
+cd ttf-monaco/
+
+sudo wget http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
+
+#then update your font cache.
+
+sudo fc-cache -fv
+
+```
+
 
 # Linux
 
