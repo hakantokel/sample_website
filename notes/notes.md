@@ -26,7 +26,7 @@ origin  git@github.com:hakantokel/sample_website.git (push)
 > Bunu console dan eklemek istersen
 
 ```console
-git remote add origin git@github.com:hakantokel/sample_website.git
+$ git remote add origin git@github.com:hakantokel/sample_website.git
 ```
 
 > seklinde olmali.
@@ -100,9 +100,41 @@ source ~/.git-completion.bash
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+# Heroku
+
+============================================
+> ### Bazi Heroku komutlari ve yardim
+
+Heroku Yardim sitesi
+
+https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction
+
+
+```console
+$ heroku create #bulunulan dizinde herokuya uygulama acar 
+
+$ heroku open  #bulunulan dizindeki uygulamanin web sayfasini acar
+
+$ heroku ps   #bulunulan dizindeki herokunun ne kadar suredir calistigi gibi bilgiler tutar. yni zamanda kac dynonun valistigi bilgisinide tutar
+
+$ heroku ps:scale web=0 # calisan  dyno sayisini sifir yapar, acmak icin 1 yap
+
+
+$ heroku run bash #dyno icindeki bash i calistirir.
+```
+
+
+
+
+============================================
+
+# Heroku
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 # Linux
 ============================================
-> ### Acilista root haklari ile komut satiri 
+> ### Acilista root haklari ile komut calistirma 
 
 Normalde Ubuntu’da ``Startup Applications`` uygulaması ile ekleyerek veya ``.bashrc`` betiğine ekleyerek bir komutun başlangıçta çalışmasını sağlamak mümkün. Ancak çalışmasını istediğimiz komut sudo yetkisi istiyorsa iş değişik.
 
