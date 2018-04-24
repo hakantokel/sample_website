@@ -5,13 +5,13 @@
 > ### SHH i kullanmak
 
 ```console
-$ ssh-keygen 
+$ ssh-keygen
 ```
 > ile .ssh klasoru altina id_rsa ve id_rsa.pub dosyalari olusturacak. id_rsa.pub in icerigi git e yuklenecek
 > Git klasorunun icerisindeki .git klasorunun icerisinde url= ile baslayan kisim ssh icin ayarlanacak (git ssh adresi buraya eklenecek, eklenmezse http ile baslayan adres zaten ssh e hic ihtiyac duymuyor)
 
 ```console
-$ git remote -v 
+$ git remote -v
 ```
 
 > o klasorun icerisinde ki url ile veya http ile baslayan (fetch pull) adreslerini gosterecek. ciktisi.
@@ -21,7 +21,7 @@ origin  git@github.com:hakantokel/sample_website.git (fetch)
 origin  git@github.com:hakantokel/sample_website.git (push)
 ```
 
-> gibi. Gerci bu ssh icin ayarli olan url adresi. ``.git/config`` icerisinde bunu gorebilirsin. 
+> gibi. Gerci bu ssh icin ayarli olan url adresi. ``.git/config`` icerisinde bunu gorebilirsin.
 
 > Bunu console dan eklemek istersen
 
@@ -82,6 +82,7 @@ Listing 32: Git configuration in the .bash_profile file. ~/.bash_profile
 .
 .
 
+> Hartl Konfigrasyon
 ```bash
 # Git configuration
 # Branch name in prompt
@@ -92,7 +93,18 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Tab completion for branch names
 source ~/.git-completion.bash
 ```
+>Benim Konfigrasyon
 
+```bash
+# Git configuration
+# Branch name in prompt
+source ~/.git-prompt.sh
+#PS1='[\W$(__git_ps1 " (%s)")]\$ '
+PS1='[\[\e[1;32m\]\W\[\e[0m\]$(__git_ps1 " (\[\e[0;36m\]%s\[\e[0m\])")]\[\e[1;36m\]\$\[\e[0m\] '
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+# Tab completion for branch names
+source ~/.git-completion.bash
+```
 ============================================
 
 
@@ -111,7 +123,7 @@ https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction
 
 
 ```console
-$ heroku create #bulunulan dizinde herokuya uygulama acar 
+$ heroku create #bulunulan dizinde herokuya uygulama acar
 
 $ heroku open  #bulunulan dizindeki uygulamanin web sayfasini acar
 
@@ -134,7 +146,7 @@ $ heroku run bash #dyno icindeki bash i calistirir.
 
 # Linux
 ============================================
-> ### Acilista root haklari ile komut calistirma 
+> ### Acilista root haklari ile komut calistirma
 
 Normalde Ubuntu’da ``Startup Applications`` uygulaması ile ekleyerek veya ``.bashrc`` betiğine ekleyerek bir komutun başlangıçta çalışmasını sağlamak mümkün. Ancak çalışmasını istediğimiz komut sudo yetkisi istiyorsa iş değişik.
 
@@ -206,16 +218,16 @@ sudo fc-cache -fv
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-# RVM 
+# RVM
 
 ============================================
 > ### Bu sayfa RVM in nasil kurulacagini anlatiyor
 https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-14-04-using-rvm
 
 
-> **_rvm yuklendikten sonra_** 
+> **_rvm yuklendikten sonra_**
 
-> `` /etc/groups `` 
+> `` /etc/groups ``
 
 >_icinde rvm in yanina kullanici adi yazilmasi gerekiyor_
 
@@ -228,7 +240,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on
 
 
 ```console
-#rvm install 2.3.1 
+#rvm install 2.3.1
 
 $rvm list
 
