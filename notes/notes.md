@@ -26,7 +26,7 @@ origin  git@github.com:hakantokel/sample_website.git (push)
 > Bunu console dan eklemek istersen
 
 ```console
-$ git remote add origin git@github.com:hakantokel/sample_website.git
+$ git remote add origin git@github.com:hakantokel/sample_website.git  #Bitbucket ta github.com yerine bitbucket.org
 ```
 
 > seklinde olmali.
@@ -35,7 +35,7 @@ $ git remote add origin git@github.com:hakantokel/sample_website.git
 > ### Configrasyon icerigini gormek
 
 ```console
-$ got config --list
+$ git config --list
 ```
 bu soyle bir cikti verir. (Tabi komut proje icerisinde yazilmali)
 
@@ -135,8 +135,53 @@ $ heroku ps:scale web=0 # calisan  dyno sayisini sifir yapar, acmak icin 1 yap
 $ heroku run bash #dyno icindeki bash i calistirir.
 ```
 
+============================================
 
+> ### Remote Heroku Adding - ~/.git/config dosyasina projeyi ekliyor
 
+Bir proje bitbucketten clonelanmis ancak heroku eklenmemisse..
+
+Bunu heroku sitesinde bulamadim ancak SSH ile calisiyor.
+https://stackoverflow.com/questions/5129598/how-to-link-a-folder-with-an-existing-heroku-app
+
+```console
+$ git remote add heroku git@heroku.com:young-mountain-84570.git
+```
+
+> Heroku kendi sitesinde bu tip bir ekleme ile dosyalari direkt alabileceginden bahsetmis ancak, bitbucket ya da github remote olarak eklenmiyor daha sonra eklenecek
+
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+```console
+
+$ heroku login
+```
+Clone the repository
+
+Use Git to clone young-mountain-84570's source code to your local machine.
+```console
+$ heroku git:clone -a young-mountain-84570
+$ cd young-mountain-84570
+```
+Deploy your changes
+
+Make some changes to the code you just cloned and deploy them to Heroku using Git.
+```console
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+
+```
+> Eger istersen bitbucket i da origin olarak eklemek icin
+
+```console
+$ git remote add origin git@bitbucket.org:hakantokel/hello_app.git
+```
+>diyerek gitbucket taki proje .git/config icine eklenmis oluyor ve push etmek istenildiginde
+
+```console
+$ git push origin master
+```
+> denilebilir. ancak bunun sonunda klasor ismi young-mountain-84570 oluyor. en guzeli bitbucket tan clone layip herokuyu remote olarak eklemek.
 
 ============================================
 
@@ -197,18 +242,18 @@ $ pdftk *.pdf cat output newfile.pdf
 > ###  install_monaco_font
 
 ```console
-cd /usr/share/fonts/truetype/
+$ cd /usr/share/fonts/truetype/
 
 #TODO: put validation if folder already exists
 sudo mkdir ttf-monaco
 
-cd ttf-monaco/
+$ cd ttf-monaco/
 
-sudo wget http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
+$ sudo wget http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
 
 #then update your font cache.
 
-sudo fc-cache -fv
+$ sudo fc-cache -fv
 
 ```
 
@@ -240,11 +285,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on
 
 
 ```console
-#rvm install 2.3.1
+$ rvm install 2.3.1
 
-$rvm list
+$ rvm list
 
-$rvm use 2.4.1
+$ rvm use 2.4.1
 ```
 
 ================================================
