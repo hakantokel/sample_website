@@ -106,6 +106,33 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 source ~/.git-completion.bash
 ```
 ============================================
+> ### Deleting untracked files
+ornegin
+```console
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  bunusil.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+ise (burada yuzlerce doysa olabilir) - Remove untracked files from the working tree
+
+```console
+$ git clean -n  #hangi dosyalarin silinecegini gosterir
+$ git clean -f  #gosterilen bu dosyalari siler
+```
+
+ek olarak
+
+    To remove directories, run ```git clean -f -d or git clean -fd```
+    To remove ignored files, run ```git clean -f -X or git clean -fX```
+    To remove ignored and non-ignored files, run ```git clean -f -x or git clean -fx```
+
+============================================
+
 
 
 # Git
@@ -211,7 +238,7 @@ ntfsfix /dev/sdXY
 
 https://linuxcommando.blogspot.com.tr/2013/02/splitting-up-is-easy-for-pdf-file.html
 
-> pdfk kurulacak
+> pdftk kurulacak
 
 ```console
 $ sudo apt-get update
