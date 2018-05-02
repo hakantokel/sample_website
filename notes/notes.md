@@ -160,6 +160,8 @@ $ heroku ps:scale web=0 # calisan  dyno sayisini sifir yapar, acmak icin 1 yap
 
 
 $ heroku run bash #dyno icindeki bash i calistirir.
+
+$ heroku pg:reset DATABASE #database i sile yeniden olusturur
 ```
 
 ============================================
@@ -287,6 +289,22 @@ $ sudo fc-cache -fv
 ============================================
 
 # Linux
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+# Rails
+============================================
+### Local datavase remove
+
+```
+$ rails db:reset db:migrate
+```
+
+
+
+
+============================================
+# Rails
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
