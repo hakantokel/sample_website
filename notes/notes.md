@@ -370,7 +370,13 @@ $ rvm use 2.4.1
 > seklinde eklersen her md dosyasi acildiginda bu tema ile acilacaktir.
 
 ================================================
+### {% %}, {%= %} otomatik olarak erb dosayasina ekleme
 
+https://github.com/eddorre/SublimeERB
+
+`CTRL + SHIFT + .` <!-- erb dosyasinda calisirken yap -->
+
+================================================
 # SUBLIME
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
