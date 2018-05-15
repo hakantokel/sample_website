@@ -154,14 +154,17 @@ $ heroku create #bulunulan dizinde herokuya uygulama acar
 
 $ heroku open  #bulunulan dizindeki uygulamanin web sayfasini acar
 
-$ heroku ps   #bulunulan dizindeki herokunun ne kadar suredir calistigi gibi bilgiler tutar. yni zamanda kac dynonun valistigi bilgisinide tutar
+$ heroku ps   #bulunulan dizindeki herokunun ne kadar suredir calistigi gibi bilgiler tutar. yani zamanda kac dynonun calistigi bilgisinide tutar
 
 $ heroku ps:scale web=0 # calisan  dyno sayisini sifir yapar, acmak icin 1 yap
 
 
 $ heroku run bash #dyno icindeki bash i calistirir.
 
-$ heroku pg:reset DATABASE #database i sile yeniden olusturur
+
+$ heroku run rails db:migrate #database migrate i server da calistirmak icin
+
+$ heroku pg:reset DATABASE #database i siler yeniden olusturur
 ```
 
 ============================================
@@ -294,10 +297,17 @@ $ sudo fc-cache -fv
 
 # Rails
 ============================================
-### Local datavase remove
+### database islamleri
 
 ```
-$ rails db:reset db:migrate
+$ rails db:migrate #use when migrations changed
+
+$ rails db:rollback #undo a single migration step
+
+$ rails db:reset db:migrate #database i siler yeniden olusturur
+
+$ rails db:migrate VERSION=0  #to go all the way back to the beginning
+
 ```
 
 
@@ -341,5 +351,26 @@ $ rvm use 2.4.1
 
 
 # RVM
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+# SUBLIME
+================================================
+### Markdown dosyasinin renk ayari (sublime3)
+> herhangi bir md dosyasi sublime da acik iken
+
+`Preferences > Settings-syntax spesific`
+
+```JSON
+// These settings override both User and Default settings for the Markdown syntax
+{
+  "color_scheme": "Packages/Colorsublime - Themes/Wildlife-Night.tmTheme"
+}
+```
+> seklinde eklersen her md dosyasi acildiginda bu tema ile acilacaktir.
+
+================================================
+
+# SUBLIME
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
