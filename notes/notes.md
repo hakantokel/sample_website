@@ -379,9 +379,12 @@ $ rvm use 2.4.1
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 # SUBLIME
+
 ================================================
 ### Markdown dosyasinin renk ayari (sublime3)
 > herhangi bir md dosyasi sublime da acik iken
+
+Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install den Wildlife-Night.tmTheme eklenmeli.
 
 `Preferences > Settings-syntax spesific`
 
@@ -394,6 +397,15 @@ $ rvm use 2.4.1
 > seklinde eklersen her md dosyasi acildiginda bu tema ile acilacaktir.
 
 ================================================
+### Html in renk ayari
+```JSON
+// These settings override both User and Default settings for the HTML syntax
+{
+  "color_scheme": "Packages/Colorsublime - Themes/Darkside_light_selection.tmTheme",
+}
+```
+
+================================================
 ### {% %}, {%= %} otomatik olarak erb dosayasina ekleme
 
 https://github.com/eddorre/SublimeERB
@@ -401,6 +413,7 @@ https://github.com/eddorre/SublimeERB
 `CTRL + SHIFT + .` <!-- erb dosyasinda calisirken yap -->
 
 ================================================
+
 # SUBLIME
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
