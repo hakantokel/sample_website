@@ -406,7 +406,7 @@ Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install de
 ```
 
 ================================================
-### ``{% %}, {%= %}`` otomatik olarak erb dosayasina ekleme
+### ``<% %>, <%= %>`` otomatik olarak erb dosayasina ekleme
 
 https://github.com/eddorre/SublimeERB
 
