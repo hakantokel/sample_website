@@ -9,11 +9,8 @@ https://github.com/JoshCheek/atom-seeing-is-believing
 
 > not: Gem file vs kurulacak ancak ayni bashte olmali, biri zsh digeri baska bash olamaz.
 
- > ## keybindings
+ > ###### keybindings --- Command+Option+B === (alt + window + B)
 
- > ###### Command(alt)+Option(window)+B to annotate every line (alt + window + B)
- > ###### Command+Option+N to annotate just marked lines (mark them by placing # => after them, or below them)
- > ###### Command+Option+V to remove annotations
 
 ============================================
 
