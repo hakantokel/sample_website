@@ -235,6 +235,30 @@ $ git push origin master
 > denilebilir. ancak bunun sonunda klasor ismi young-mountain-84570 oluyor. en guzeli bitbucket tan clone layip herokuyu remote olarak eklemek.
 
 ============================================
+> ### Heroku Config (.git/config)(home machine)
+
+```Bash
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@bitbucket.org:hakantokel/sample_app.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "heroku"]
+	url = https://git.heroku.com/agile-lowlands-35214.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+[branch "static-pages"]
+	remote = origin
+	merge = refs/heads/static-pages
+```
+
+
+============================================
 
 # Heroku
 
@@ -374,9 +398,12 @@ $ rvm use 2.4.1
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 # SUBLIME
+
 ================================================
 ### Markdown dosyasinin renk ayari (sublime3)
 > herhangi bir md dosyasi sublime da acik iken
+
+Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install den Wildlife-Night.tmTheme eklenmeli.
 
 `Preferences > Settings-syntax spesific`
 
@@ -389,13 +416,23 @@ $ rvm use 2.4.1
 > seklinde eklersen her md dosyasi acildiginda bu tema ile acilacaktir.
 
 ================================================
-### {% %}, {%= %} otomatik olarak erb dosayasina ekleme
+### Html in renk ayari
+```JSON
+// These settings override both User and Default settings for the HTML syntax
+{
+  "color_scheme": "Packages/Colorsublime - Themes/Darkside_light_selection.tmTheme",
+}
+```
+
+================================================
+### ``<% %>, <%= %>`` otomatik olarak erb dosayasina ekleme
 
 https://github.com/eddorre/SublimeERB
 
 `CTRL + SHIFT + .` <!-- erb dosyasinda calisirken yap -->
 
 ================================================
+
 # SUBLIME
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
