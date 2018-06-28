@@ -4,6 +4,7 @@
 > ### Ruby eklentisi seeing_is_believing
 
 > Displays the results of every line of code in your file
+
 https://github.com/JoshCheek/atom-seeing-is-believing
 
 > not: Gem file vs kurulacak ancak ayni bashte olmali, biri zsh digeri baska bash olamaz.
