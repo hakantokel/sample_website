@@ -149,6 +149,15 @@ ek olarak
     To remove ignored and non-ignored files, run ```git clean -f -x or git clean -fx```
 
 ============================================
+> ### Git icin uygun bir anlatim videosu
+[Tom Preston-Werner - Mastering Git Basics](https://vimeo.com/17118008)
+burada bahsedilen en iyi konu, degisikliklerin once stage e sonra commite gittigi.
+stage ile calisan dizin arasindaki fark ``git diff`` ile , commit ile stage arasindaki fark
+``git diff --staged`` ile gorulebilir.
+``git add -p`` ile degisiklikleri gorup onaylayarak stage e ekleyebilirsiniz.
+
+
+============================================
 
 
 
