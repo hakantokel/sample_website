@@ -246,22 +246,22 @@ $ git push origin master
 
 ```Bash
 [core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
+  repositoryformatversion = 0
+  filemode = true
+  bare = false
+  logallrefupdates = true
 [remote "origin"]
-	url = git@bitbucket.org:hakantokel/sample_app.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+  url = git@bitbucket.org:hakantokel/sample_app.git
+  fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
-	remote = origin
-	merge = refs/heads/master
+  remote = origin
+  merge = refs/heads/master
 [remote "heroku"]
-	url = https://git.heroku.com/agile-lowlands-35214.git
-	fetch = +refs/heads/*:refs/remotes/heroku/*
+  url = https://git.heroku.com/agile-lowlands-35214.git
+  fetch = +refs/heads/*:refs/remotes/heroku/*
 [branch "static-pages"]
-	remote = origin
-	merge = refs/heads/static-pages
+  remote = origin
+  merge = refs/heads/static-pages
 ```
 
 
@@ -362,6 +362,22 @@ $ rails db:migrate VERSION=0  #to go all the way back to the beginning
 
 
 
+
+============================================
+### Rails server degisikligi hemen fark etmiyorsa (vagrant)
+[stackoverflow](https://stackoverflow.com/questions/41067064/rails-5-restart-server-every-time-controller-or-model-changes)
+
+>Basicallly besides having:
+
+```
+config.cache_classes = false
+```
+
+>in the development.rb file it is also necessary to have:
+
+```
+config.reload_classes_only_on_change = false
+```
 
 ============================================
 # Rails
