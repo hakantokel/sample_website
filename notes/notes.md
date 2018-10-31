@@ -186,6 +186,7 @@ $ heroku ps:scale web=0 # calisan  dyno sayisini sifir yapar, acmak icin 1 yap
 
 
 $ heroku run bash #dyno icindeki bash i calistirir.
+$ heroku run console #dyno icindeki console u calistirir.
 
 
 $ heroku run rails db:migrate #database migrate i server da calistirmak icin
