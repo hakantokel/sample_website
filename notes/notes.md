@@ -100,6 +100,7 @@ Listing 32: Git configuration in the .bash_profile file. ~/.bash_profile
 .
 
 > Hartl Konfigrasyon
+
 ```bash
 # Git configuration
 # Branch name in prompt
@@ -110,6 +111,19 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Tab completion for branch names
 source ~/.git-completion.bash
 ```
+> Vagarant icin
+
+```bash
+# Git configuration
+# Branch name in prompt
+source ~/.git-prompt.sh
+PS1='[\[\e[1;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[1;31m\]%s\[\e[m\])")]\[\e[0;36m\]\$\[\e[m\] '
+#PS1='[\W$(__git_ps1 " (%s)")]\$ '
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+# Tab completion for branch names
+source ~/.git-completion.bash
+```
+
 >Benim Konfigrasyon
 
 ```bash
@@ -123,7 +137,46 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 source ~/.git-completion.bash
 ```
 ============================================
+> ### BAzi promt ta kullanilabilir renkler
+
+```bash
+txtblk='\e[0;30m' # Black - Regular
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+txtylw='\e[0;33m' # Yellow
+txtblu='\e[0;34m' # Blue
+txtpur='\e[0;35m' # Purple
+txtcyn='\e[0;36m' # Cyan
+txtwht='\e[0;37m' # White
+bldblk='\e[1;30m' # Black - Bold
+bldred='\e[1;31m' # Red
+bldgrn='\e[1;32m' # Green
+bldylw='\e[1;33m' # Yellow
+bldblu='\e[1;34m' # Blue
+bldpur='\e[1;35m' # Purple
+bldcyn='\e[1;36m' # Cyan
+bldwht='\e[1;37m' # White
+unkblk='\e[4;30m' # Black - Underline
+undred='\e[4;31m' # Red
+undgrn='\e[4;32m' # Green
+undylw='\e[4;33m' # Yellow
+undblu='\e[4;34m' # Blue
+undpur='\e[4;35m' # Purple
+undcyn='\e[4;36m' # Cyan
+undwht='\e[4;37m' # White
+bakblk='\e[40m'   # Black - Background
+bakred='\e[41m'   # Red
+bakgrn='\e[42m'   # Green
+bakylw='\e[43m'   # Yellow
+bakblu='\e[44m'   # Blue
+bakpur='\e[45m'   # Purple
+bakcyn='\e[46m'   # Cyan
+bakwht='\e[47m'   # White
+txtrst='\e[0m'    # Text Reset
+```
+============================================
 > ### Deleting untracked files
+
 ornegin
 ```console
 $ git status
