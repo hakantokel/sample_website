@@ -518,6 +518,14 @@ https://github.com/eddorre/SublimeERB
 # VAGRANT
 
 ================================================
+### Vagrant localization
+
+```bash
+$ echo "export LC_CTYPE=en_US.UTF-8" >> ~/.bashrc
+$ echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc
+```
+
+================================================
 
 ###  Vagrant box olusturma ve kullanma
 
