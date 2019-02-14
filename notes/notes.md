@@ -464,6 +464,8 @@ $ rvm install 2.3.1
 
 $ rvm list
 
+$ rvm --default use 2.3.1
+
 $ rvm use 2.4.1
 ```
 
@@ -512,4 +514,42 @@ https://github.com/eddorre/SublimeERB
 
 # SUBLIME
 
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+# VAGRANT
+
+================================================
+
+###  Vagrant box olusturma ve kullanma
+
+> vagrant calisiyor iken host ta
+
+```bash
+$ vagrant package --output custom.box
+```
+> bu custom.box isminde buyuk dosya yapar. artik bu dosyayi kullanabiliriz. soyle
+
+```bash
+$ vagrant box add custom custom.box
+```
+> bu komut ile "custom" isminde box olusturulur.
+
+```bash
+$ vagrant box list
+```
+> ile bu box lar gozukur. Artik bunu herhangi bir yerde vagrant box gibi kullanabilirsin. Vagrantfile dosyasinda
+```ruby
+  config.vm.box = "custom"
+```
+> ile degisitdikten sonra
+```bash
+ $ vagrant up
+ ```
+
+================================================
+
+
+
+
+
+# VAGRANT
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
