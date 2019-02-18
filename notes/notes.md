@@ -1,6 +1,14 @@
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 # Atom
+
 ============================================
+> ### styleguide (bootstrap a cok benziyor)
+ctrl + shift + g
+
+============================================
+
+
+
 > ### Ruby eklentisi seeing_is_believing
 
 > Displays the results of every line of code in your file
