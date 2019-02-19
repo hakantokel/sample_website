@@ -221,6 +221,89 @@ stage ile calisan dizin arasindaki fark ``git diff`` ile , commit ile stage aras
 ============================================
 ### Multiple ssh settings How to make
 
+bir bilgisayardan birden cok github hesabiyla calismak istiyorsun, git global de tanimli bir mail ve kullanici adin var ve normaldede ssh ile kendi hesabina baglanabiliyorsun. ``~/.ssh`` klasoru altinda iki dosyan var
+
+```console
+  id_rsa
+  id_rsa.pub
+```
+
+simdi yeni ssh key pair olusturmalisin
+ben 2 farkli hesabada bu hesaptan erismek istedigimden 2 farkli ssh keypair olusturacagim komut
+
+```console
+  $ ssh-keygen -t rsa -C "h............l@gmail.com"
+  #bu mail kullanilan makina maili
+```
+
+ve hemen gorecegimiz sey
+
+```console
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user_name/.ssh/id_rsa):
+```
+burada kullanmak istedigim rsa ciftini isimlendiricem, ayirt edebilmek icin kullanmak istedigim hesabin kullanici adini yazicam
+
+```console
+/home/user_name/.ssh/id_rsa_h..........l
+```
+bu ssh key pair ciftlerini olusturacak
+
+ilgili github hesabina giris yapip public key i oraya ekleyecegim
+
+daha sonra ``~/.ssh/`` klasoru altinda bir ``config`` dosyasi olusturacagim ve icerisi su sekilde
+
+```bash
+#Default host
+Host github.com
+  Hostname github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+#h.........l githubina ssh ile baglanmak icin
+Host h.........l
+  Hostname github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_h.........l
+```
+
+* dikkat edilecek husus sunlar
+  * #Default host kullanilan makinanin github normal calismaya devam edevektir. ``Host github.com`` ile ``Hostname github.com`` ayni ve IdentityFile normal ``~/.ssh/id_rsa`` yi isaret ediyor.
+  * diger hesaba github ile baglanirken ya diger hesap icerisinden repositorinin Collaborators yetkilerini almis olman gerekiyor (bu elbette sadece diger hesaptaki repository icin ise yariyor), ama kesin cozum diger hesabin tamaminda yapacagin degisikliklerde, diger hesabin repository sini klonladiginda ya da elindeki diger reponun remotu nu ilgili proje altinda **.git/config** dosyasinin icerisini asagidaki gibi guncellemelisin
+
+  ```console
+  [remote "origin"]
+    url = git@h........l:h......l/sample_website.git
+    # url = git@github.com:h........l/sample_website.git
+    # url = https://github.com/h....l/sample_website.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+  ```
+  * ``url = ``te bulunan **github.com** kismini **h.........l** ile degistirmen gerekiyor. ustte degistirilmis, degismemis olani commit li
+  * bunlar saglaninca normal ssh i kullanabiliyorsun. loglarda o anki bilgisayar daki tanimli mail adresi gozukuyor.
+
+  baglanti var mi diye su komut kullanilabilir
+  default olan icin
+
+  ```console
+    $ ssh -T git@github.com
+  ```
+
+  h......l github ina baglilik kontrolu icin
+  ```console
+  $ ssh -T git@h.......l
+  ```
+
+  goruldugu gibi aslinda **github.com** yerine **h.......l** kullaniyo ``.ssh/config`` dosyasi icerisinde
+
+  ```console
+  Host h.........l
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_h.........l
+  ```
+  en alt satirdaki IdentityFile ise private dosya yolu. burada ne isim oldugu cok onemli degil. sadece private ssh dosyayi isaret etmeli
+  [kaynak](https://www.integralist.co.uk/posts/multiple-ssh-keys-for-different-github-accounts/)
+
 ============================================
 
 
