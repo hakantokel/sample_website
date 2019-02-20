@@ -1,5 +1,5 @@
 
-#names bir dizidir.
+#names bir dizidir. evet
 names = ['yusuf','kemal', 'bekir','ayşe']
 #'kemal'i degistirelim.
 names['kemal'] = 'mehmet'
