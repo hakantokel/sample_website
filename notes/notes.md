@@ -536,7 +536,7 @@ config.reload_classes_only_on_change = false
 
 ============================================
 > ### Bu sayfa RVM in nasil kurulacagini anlatiyor
-https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-14-04-using-rvm
+[nasil kurulur](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-14-04-using-rvm)
 
 
 > **_rvm yuklendikten sonra_**
@@ -553,14 +553,24 @@ https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on
 > ### Bazi RVM komutlari
 
 
-```console
-$ rvm install 2.3.1
+```bash
+$ rvm install 2.3.1 #ruby 2.3.1 i yukler
 
-$ rvm list
+$ rvm list  # yuklu ruby leri gosterir
 
-$ rvm --default use 2.3.1
+$ rvm --default use 2.3.1 #2.3.1 versiyonunu default olrak kullanir
 
-$ rvm use 2.4.1
+$ rvm use 2.4.1 # gecici sure ruby 2.4.1 kullanir
+
+$ rvm gemset list # ruby icerisindeki gemset leri listeler
+
+$ rvm gemset list_all # tum ruby lerdeki gemsetleri listeler
+
+$ rvm gemset create no_rails # yeni bir gemset olusturur
+
+$ rvm gemset use no_rails # gemset i kullanir
+
+$ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak kullanir
 ```
 
 ================================================
