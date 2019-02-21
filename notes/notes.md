@@ -572,6 +572,10 @@ $ rvm gemset use no_rails # gemset i kullanir
 
 $ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak kullanir
 ```
+**onemli** Herhangi bir klasore girince ruby versiyonu degissin istiyorsan
+``.ruby-version`` dosyasinin icinde sadece ``2.5.3`` gibi versioyon yazmasi yeterli iken,
+hem ruby versioyn hem de gemset degissin istiyor isen ``.rvmrc`` dosyasinin icerinse
+``rvm 2.5.3@no_rails`` gibi yazilmasi gerekiyor. "no_rails" gemset icin belirledigin herhangi bir ad.
 
 ================================================
 
