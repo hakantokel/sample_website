@@ -549,11 +549,12 @@ config.reload_classes_only_on_change = false
 ```
 
 ***
-### bazim gemler
+### bazi gemler
 
 | Gems | Expression |
 | :--- | :---: |
 | **annotate** | add schema to model as comments |
+|  |  |
 
 ***
 # Rails
