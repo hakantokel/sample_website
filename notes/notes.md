@@ -6,6 +6,11 @@
 ctrl + shift + g
 
 ============================================
+> ### markdown-scroll-sync
+Auto-scroll markdown preview tab to match markdowns source
+
+============================================
+
 
 
 
