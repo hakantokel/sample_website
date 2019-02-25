@@ -552,8 +552,8 @@ config.reload_classes_only_on_change = false
 ### bazim gemler
 
 | Gems | Expression |
-|:---| :---: |
-|**annotate** |add schema to model as comments
+| :--- | :---: |
+| **annotate** | add schema to model as comments |
 
 ***
 # Rails
