@@ -1,15 +1,15 @@
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 # Atom
 
-============================================
+***
 > ### styleguide (bootstrap a cok benziyor)
 ctrl + shift + g
 
-============================================
+***
 > ### markdown-scroll-sync
 Auto-scroll markdown preview tab to match markdowns source
 
-============================================
+***
 
 
 
@@ -25,13 +25,13 @@ https://github.com/JoshCheek/atom-seeing-is-believing
  > ###### keybindings --- Command+Option+B === (alt + window + B)
 
 
-============================================
+***
 
 # Atom
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 # Git
-============================================
+***
 > ### SHH i kullanmak
 
 ```console
@@ -61,7 +61,7 @@ $ git remote add origin git@github.com:hakantokel/sample_website.git  #Bitbucket
 
 > seklinde olmali.
 
-============================================
+***
 > ### Configrasyon icerigini gormek
 
 ```console
@@ -84,7 +84,7 @@ branch.gh-pages.remote=origin
 branch.gh-pages.merge=refs/heads/gh-pages
 ```
 
-============================================
+***
 > ### Promt ta git gosterimi
 
 n this section, we’ll add two final advanced customizations. First, we’ll arrange for the command-line prompt to include the name of the current branch. Second, we’ll add the ability to fill in Git branch names using tab completion, which is especially convenient when dealing with longer branch names. Both of these features come as shell scripts with the Git source code distribution, which can be downloaded as shown in Listing 31.
@@ -149,7 +149,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Tab completion for branch names
 source ~/.git-completion.bash
 ```
-============================================
+***
 > ### BAzi promt ta kullanilabilir renkler
 
 ```bash
@@ -187,7 +187,7 @@ bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 ```
-============================================
+***
 > ### Deleting untracked files
 
 ornegin
@@ -214,7 +214,7 @@ ek olarak
     To remove ignored files, run ```git clean -f -X or git clean -fX```
     To remove ignored and non-ignored files, run ```git clean -f -x or git clean -fx```
 
-============================================
+***
 > ### Git icin uygun bir anlatim videosu
 [Tom Preston-Werner - Mastering Git Basics](https://vimeo.com/17118008)
 burada bahsedilen en iyi konu, degisikliklerin once stage e sonra commite gittigi.
@@ -223,7 +223,7 @@ stage ile calisan dizin arasindaki fark ``git diff`` ile , commit ile stage aras
 ``git add -p`` ile degisiklikleri gorup onaylayarak stage e ekleyebilirsiniz.
 
 
-============================================
+***
 ### Multiple ssh settings How to make
 
 bir bilgisayardan birden cok github hesabiyla calismak istiyorsun, git global de tanimli bir mail ve kullanici adin var ve normaldede ssh ile kendi hesabina baglanabiliyorsun. ``~/.ssh`` klasoru altinda iki dosyan var
@@ -309,7 +309,7 @@ Host h.........l
   en alt satirdaki IdentityFile ise private dosya yolu. burada ne isim oldugu cok onemli degil. sadece private ssh dosyayi isaret etmeli
   [kaynak](https://www.integralist.co.uk/posts/multiple-ssh-keys-for-different-github-accounts/)
 
-============================================
+***
 
 
 
@@ -319,7 +319,7 @@ Host h.........l
 
 # Heroku
 
-============================================
+***
 > ### Bazi Heroku komutlari ve yardim
 
 Heroku Yardim sitesi
@@ -346,7 +346,7 @@ $ heroku run rails db:migrate #database migrate i server da calistirmak icin
 $ heroku pg:reset DATABASE #database i siler yeniden olusturur
 ```
 
-============================================
+***
 
 > ### Remote Heroku Adding - ~/.git/config dosyasina projeyi ekliyor
 
@@ -394,7 +394,7 @@ $ git push origin master
 ```
 > denilebilir. ancak bunun sonunda klasor ismi young-mountain-84570 oluyor. en guzeli bitbucket tan clone layip herokuyu remote olarak eklemek.
 
-============================================
+***
 > ### Heroku Config (.git/config)(home machine)
 
 ```Bash
@@ -418,14 +418,14 @@ $ git push origin master
 ```
 
 
-============================================
+***
 
 # Heroku
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 # Linux
-============================================
+***
 > ### Acilista root haklari ile komut calistirma
 
 Normalde Ubuntu’da ``Startup Applications`` uygulaması ile ekleyerek veya ``.bashrc`` betiğine ekleyerek bir komutun başlangıçta çalışmasını sağlamak mümkün. Ancak çalışmasını istediğimiz komut sudo yetkisi istiyorsa iş değişik.
@@ -440,7 +440,7 @@ ntfsfix /dev/sdXY
 
 > eklemistim baslangicta calisti ve hhd yi mount etti
 
-============================================
+***
 
 > ### Bazi pdf dosyalarini parcalamak icin
 
@@ -473,7 +473,7 @@ $ pdftk file1.pdf file2.pdf file3.pdf cat output newfile.pdf
 $ pdftk *.pdf cat output newfile.pdf
 ```
 
-============================================
+***
 > ###  install_monaco_font
 
 ```console
@@ -492,14 +492,30 @@ $ sudo fc-cache -fv
 
 ```
 
-============================================
+***
 
 # Linux
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+***
+<details><summary>MARKDOWN</summary><br>
+
+- Or a List
+  - or a nested List
+  - like this
+  - with 😄 emojis
+- Like this
+
+</details>
+
+***
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 # Rails
-============================================
+***
 ### database islamleri
 
 ```
@@ -516,7 +532,7 @@ $ rails db:migrate VERSION=0  #to go all the way back to the beginning
 
 
 
-============================================
+***
 ### Rails server degisikligi hemen fark etmiyorsa (vagrant)
 [stackoverflow](https://stackoverflow.com/questions/41067064/rails-5-restart-server-every-time-controller-or-model-changes)
 
@@ -532,14 +548,20 @@ config.cache_classes = false
 config.reload_classes_only_on_change = false
 ```
 
-============================================
+***
+### bazim gemler
+| Gems | Expression |
+|:---| :---: |
+|**annotate** |add schema to model as comments
+
+***
 # Rails
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 # RVM
 
-============================================
+***
 > ### Bu sayfa RVM in nasil kurulacagini anlatiyor
 [nasil kurulur](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-14-04-using-rvm)
 
@@ -553,7 +575,7 @@ config.reload_classes_only_on_change = false
 `` rvm:x:1003:vagrant:hakan ``
 >_gibi._
 
-============================================
+***
 
 > ### Bazi RVM komutlari
 
@@ -582,7 +604,19 @@ $ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak k
 hem ruby versioyn hem de gemset degissin istiyor isen ``.rvmrc`` dosyasinin icerinse
 ``rvm 2.5.3@no_rails`` gibi yazilmasi gerekiyor. "no_rails" gemset icin belirledigin herhangi bir ad.
 
-================================================
+***====
+
+sadece kendi gemsetin icerisindeki gem leri listelemek ister isen
+
+```
+$ ls `rvm gemdir`/gems
+```
+
+if you want listing for gems dependency
+
+```
+$ gem dependency {gemname} --reverse-dependencies
+```
 
 
 # RVM
@@ -591,7 +625,7 @@ hem ruby versioyn hem de gemset degissin istiyor isen ``.rvmrc`` dosyasinin icer
 
 # SUBLIME
 
-================================================
+***====
 ### Markdown dosyasinin renk ayari (sublime3)
 > herhangi bir md dosyasi sublime da acik iken
 
@@ -607,7 +641,7 @@ Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install de
 ```
 > seklinde eklersen her md dosyasi acildiginda bu tema ile acilacaktir.
 
-================================================
+***====
 ### Html in renk ayari
 ```JSON
 // These settings override both User and Default settings for the HTML syntax
@@ -616,21 +650,21 @@ Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install de
 }
 ```
 
-================================================
+***====
 ### ``<% %>, <%= %>`` otomatik olarak erb dosayasina ekleme
 
 https://github.com/eddorre/SublimeERB
 
 `CTRL + SHIFT + .` <!-- erb dosyasinda calisirken yap -->
 
-================================================
+***====
 
 # SUBLIME
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 # VAGRANT
 
-================================================
+***====
 ### Vagrant localization
 
 ```bash
@@ -638,7 +672,7 @@ $ echo "export LC_CTYPE=en_US.UTF-8" >> ~/.bashrc
 $ echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc
 ```
 
-================================================
+***====
 
 ###  Vagrant box olusturma ve kullanma
 
@@ -666,7 +700,7 @@ $ vagrant box list
  $ vagrant up
  ```
 
-================================================
+***====
 
 
 
