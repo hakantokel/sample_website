@@ -16,13 +16,13 @@ Auto-scroll markdown preview tab to match markdowns source
 
 > ### Ruby eklentisi seeing_is_believing
 
-> Displays the results of every line of code in your file
+Displays the results of every line of code in your file
 
 https://github.com/JoshCheek/atom-seeing-is-believing
 
 > not: Gem file vs kurulacak ancak ayni bashte olmali, biri zsh digeri baska bash olamaz.
 
- > ###### keybindings --- Command+Option+B === (alt + window + B)
+ ##### keybindings --- Command+Option+B === (alt + window + B)
 
 
 ***
@@ -51,9 +51,7 @@ origin  git@github.com:hakantokel/sample_website.git (fetch)
 origin  git@github.com:hakantokel/sample_website.git (push)
 ```
 
-> gibi. Gerci bu ssh icin ayarli olan url adresi. ``.git/config`` icerisinde bunu gorebilirsin.
-
-> Bunu console dan eklemek istersen
+> gibi. Gerci bu ssh icin ayarli olan url adresi. ```.git/config``` icerisinde bunu gorebilirsin. Bunu console dan eklemek istersen
 
 ```console
 $ git remote add origin git@github.com:hakantokel/sample_website.git  #Bitbucket ta github.com yerine bitbucket.org
@@ -137,7 +135,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 source ~/.git-completion.bash
 ```
 
->Benim Konfigrasyon
+> Benim Konfigrasyon
 
 ```bash
 # Git configuration
@@ -234,12 +232,24 @@ $ git clean -f  #gosterilen bu dosyalari siler
 
 ek olarak
 
-    To remove directories, run ```git clean -f -d or git clean -fd```
-    To remove ignored files, run ```git clean -f -X or git clean -fX```
-    To remove ignored and non-ignored files, run ```git clean -f -x or git clean -fx```
+To remove directories, run ```git clean -f -d``` or ```git clean -fd```
+To remove ignored files, run ```git clean -f -X``` or ```git clean -fX```
+To remove ignored and non-ignored files, run ```git clean -f -x``` or ```git clean -fx```
 
 ***
-> ### Git icin uygun bir anlatim videosu
+> ### Git Reset
+
+```git reset --soft 852309``` will remove all commits after commit 852309 and will bring all changed code after that into the staging area. You don’t need to use the full hash of a commit. All commits after this commit are then removed from git history.
+
+```git reset --mixed 852309``` will remove all commits after commit 852309 and will bring the changed code after that to the working area. This command is the same as ```git reset 852309```.
+
+```git reset --hard 852309``` will remove all commits after commit ```852309``` and destroy all changed code after that. This will also remove changed file in working or staging area. Hence ```git reset --hard HEAD``` is also used to get rid of all the changes whether it is inside the working area or the staging area. **One important thing to remember is that all untracked files (newly created files) will not be removed.**
+
+> This command resets the Git history which can be potentially be dangerous. Hence, make sure that you are only altering commits that are not yet pushed to the remote repository so that other developer won’t face any problems.
+
+***
+ ### Git icin uygun bir anlatim videosu
+
 [Tom Preston-Werner - Mastering Git Basics](https://vimeo.com/17118008)
 burada bahsedilen en iyi konu, degisikliklerin once stage e sonra commite gittigi.
 stage ile calisan dizin arasindaki fark ``git diff`` ile , commit ile stage arasindaki fark
