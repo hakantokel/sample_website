@@ -187,6 +187,30 @@ bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 ```
+
+***
+> ### Git logs visual improve
+
+``` ~/.gitconfig``` dosyasinin icerisine asagidaki kodu ekle
+
+```bash
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+```
+
+daha sonra bash i yeniden baslattiginda ilgili proje klasorunde log lari gormek icin
+
+``` git lg``` yazman yeterli
+digerleri
+``` git lg1 ```
+```git lg2 ```
+
+
+
+
+
 ***
 > ### Deleting untracked files
 
