@@ -28,8 +28,20 @@ https://github.com/JoshCheek/atom-seeing-is-believing
 ***
 
 # Atom
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+***
 
+# Gems
+
+> **artii**
+
+
+
+A Figlet-based ASCII art generator, useful for comand-line based ASCII Art Generation.
+
+
+
+# Gems
+***
 # Git
 ***
 > ### SHH i kullanmak
