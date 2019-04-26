@@ -625,6 +625,15 @@ config.reload_classes_only_on_change = false
 
 ***
 
+> ### RVM tab completion
+
+put fallowing line to ```.bashrc``` file
+
+```console
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+```
+
+
 > ### Bazi RVM komutlari
 
 
@@ -643,6 +652,10 @@ $ rvm gemset list_all # tum ruby lerdeki gemsetleri listeler
 
 $ rvm gemset create no_rails # yeni bir gemset olusturur
 
+$ rvm gemset empty no_rails # no_rails isiml gemset icerindeki gemleri siler
+
+$ rvm gemset delete no_rails # no_rails isimli gemset i siler
+
 $ rvm gemset use no_rails # gemset i kullanir
 
 $ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak kullanir
@@ -652,7 +665,7 @@ $ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak k
 hem ruby versioyn hem de gemset degissin istiyor isen ``.rvmrc`` dosyasinin icerinse
 ``rvm 2.5.3@no_rails`` gibi yazilmasi gerekiyor. "no_rails" gemset icin belirledigin herhangi bir ad.
 
-***====
+***
 
 sadece kendi gemsetin icerisindeki gem leri listelemek ister isen
 
@@ -673,7 +686,7 @@ $ gem dependency {gemname} --reverse-dependencies
 
 # SUBLIME
 
-***====
+***
 ### Markdown dosyasinin renk ayari (sublime3)
 > herhangi bir md dosyasi sublime da acik iken
 
@@ -689,7 +702,7 @@ Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install de
 ```
 > seklinde eklersen her md dosyasi acildiginda bu tema ile acilacaktir.
 
-***====
+***
 ### Html in renk ayari
 ```JSON
 // These settings override both User and Default settings for the HTML syntax
@@ -698,21 +711,21 @@ Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install de
 }
 ```
 
-***====
+***
 ### ``<% %>, <%= %>`` otomatik olarak erb dosayasina ekleme
 
 https://github.com/eddorre/SublimeERB
 
 `CTRL + SHIFT + .` <!-- erb dosyasinda calisirken yap -->
 
-***====
+***
 
 # SUBLIME
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 # VAGRANT
 
-***====
+***
 ### Vagrant localization
 
 ```bash
@@ -720,7 +733,7 @@ $ echo "export LC_CTYPE=en_US.UTF-8" >> ~/.bashrc
 $ echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc
 ```
 
-***====
+***
 
 ###  Vagrant box olusturma ve kullanma
 
@@ -748,7 +761,7 @@ $ vagrant box list
  $ vagrant up
  ```
 
-***====
+***
 
 
 
