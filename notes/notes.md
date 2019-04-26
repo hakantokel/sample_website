@@ -640,26 +640,33 @@ put fallowing line to ```.bashrc``` file
 ```bash
 $ rvm install 2.3.1 #ruby 2.3.1 i yukler
 
+$ rvm uninstall 2.3.1 # ruby 2.3.1 kaldirir
+
 $ rvm list  # yuklu ruby leri gosterir
+
+$ rvm list known # yuklenebilecek ruby leri gosterir
 
 $ rvm --default use 2.3.1 #2.3.1 versiyonunu default olrak kullanir
 
 $ rvm use 2.4.1 # gecici sure ruby 2.4.1 kullanir
 
+$ rvm use system # sistemde yuklu olan ruby versiyonunu kullanir
+
 $ rvm gemset list # ruby icerisindeki gemset leri listeler
 
 $ rvm gemset list_all # tum ruby lerdeki gemsetleri listeler
 
-$ rvm gemset create no_rails # yeni bir gemset olusturur
+$ rvm gemset create no_rails # no_rails isimli gemset olusturur
 
-$ rvm gemset empty no_rails # no_rails isiml gemset icerindeki gemleri siler
+$ rvm gemset empty no_rails # no_rails isimli gemset icerindeki gemleri siler
 
 $ rvm gemset delete no_rails # no_rails isimli gemset i siler
 
-$ rvm gemset use no_rails # gemset i kullanir
+$ rvm gemset use no_rails # no_rails gemset i kullanir (gecici)
 
 $ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak kullanir
 ```
+
 **onemli** Herhangi bir klasore girince ruby versiyonu degissin istiyorsan
 ``.ruby-version`` dosyasinin icinde sadece ``2.5.3`` gibi versioyon yazmasi yeterli iken,
 hem ruby versioyn hem de gemset degissin istiyor isen ``.rvmrc`` dosyasinin icerinse
@@ -679,6 +686,11 @@ if you want listing for gems dependency
 $ gem dependency {gemname} --reverse-dependencies
 ```
 
+> ### rvm guncellemek icin
+
+```console
+$ rvm get stable # rvm i gunceller
+```
 
 # RVM
 
