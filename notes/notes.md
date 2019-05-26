@@ -613,7 +613,77 @@ config.reload_classes_only_on_change = false
 > ### Bu sayfa RVM in nasil kurulacagini anlatiyor
 [nasil kurulur](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-14-04-using-rvm)
 
+---
+---
+### ubuntu 16.04 icin rvm ve rails  kurulum
 
+you need an Ubuntu 16.04 server with a non-root user.
+
+```bash
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+cd /tmp
+
+curl -sSL https://get.rvm.io -o rvm.sh
+
+cat /tmp/rvm.sh | bash -s stable --rails
+```
+> bash i yeniden baslat ve boylece en son rails ruby yuklenmis olur
+
+### Install JavaScript Runtime
+
+[su sayfadan en son guncel nodejs yuklenebilinir](https://github.com/nodesource/distributions)
+yani soyle
+
+```bash
+\curl -sSL https://deb.nodesource.com/setup_12.x -o nodejs.sh
+
+cat /tmp/nodejs.sh | sudo -E bash -
+
+sudo apt-get update
+
+sudo apt-get install -y nodejs
+
+```
+
+vagrant icinde bu hata icin duzeltme yap
+```bash
+LANGUAGE = "en_US:en",
+    LC_ALL = (unset),
+    LC_TIME = "tr_TR.UTF-8",
+    LC_MONETARY = "tr_TR.UTF-8",
+    LC_CTYPE = "en_US.UTF-8",
+    LC_ADDRESS = "tr_TR.UTF-8",
+    LC_TELEPHONE = "tr_TR.UTF-8",
+    LC_NAME = "tr_TR.UTF-8",
+    LC_MEASUREMENT = "tr_TR.UTF-8",
+    LC_IDENTIFICATION = "tr_TR.UTF-8",
+    LC_NUMERIC = "tr_TR.UTF-8",
+    LC_PAPER = "tr_TR.UTF-8",
+    LANG = "en_US.UTF-8"
+```
+duzeltmek icin
+[bu sayfa](https://www.netinternet.com.tr/bilgi-bankasi/ubuntu-perl-warning-setting-locale-failed-problemi)
+```bash
+echo "export LC_CTYPE=en_US.UTF-8" >> ~/.bashrc
+echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc
+```
+Eğer zsh kullanıyorsanız yukarıda yer alan komutlarda ~/.bashrc yerine ~/.zshrc olarak düzenlemeniz yeterli olacaktır.
+
+### yarn yukle
+
+[bu sayfadan ubuntu 16.04 icin](https://yarnpkg.com/en/docs/install#debian-stable)
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+```
+
+```bash
+sudo apt-get update && sudo apt-get install yarn
+```
+---
+---
 > **_rvm yuklendikten sonra_**
 
 > `` /etc/groups ``
@@ -665,6 +735,13 @@ $ rvm gemset delete no_rails # no_rails isimli gemset i siler
 $ rvm gemset use no_rails # no_rails gemset i kullanir (gecici)
 
 $ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak kullanir
+
+$ gem search '^rails$' --all #rails gemleri listeler
+
+$ gem install rails -v rails_version #rails_version yerine 5.2.2 yazilabilinir.
+
+
+
 ```
 
 **onemli** Herhangi bir klasore girince ruby versiyonu degissin istiyorsan
