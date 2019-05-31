@@ -212,10 +212,10 @@ lg = !"git lg1"
 
 daha sonra bash i yeniden baslattiginda ilgili proje klasorunde log lari gormek icin
 
-``` git lg``` yazman yeterli
+```git lg``` yazman yeterli
 digerleri
-``` git lg1 ```
-```git lg2 ```
+```git lg1```
+```git lg2```
 
 
 
@@ -225,6 +225,7 @@ digerleri
 > ### Deleting untracked files
 
 ornegin
+
 ```console
 $ git status
 On branch master
@@ -259,6 +260,8 @@ To remove ignored and non-ignored files, run ```git clean -f -x``` or ```git cle
 
 > This command resets the Git history which can be potentially be dangerous. Hence, make sure that you are only altering commits that are not yet pushed to the remote repository so that other developer won’t face any problems.
 
+sadece dosya icerisinde yapilan degisiklikler var ise
+``` git checkout .``` ile bunu dizeltebilirsin.
 ***
  ### Git icin uygun bir anlatim videosu
 
