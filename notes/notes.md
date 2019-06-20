@@ -140,7 +140,10 @@ source ~/.git-completion.bash
 # Git configuration
 # Branch name in prompt
 source ~/.git-prompt.sh
-PS1='[\[\e[1;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[1;31m\]%s\[\e[m\])")]\[\e[0;36m\]\$\[\e[m\] '
+#user eklenmis
+PS1='\e[0;35m\u\e[m[\[\e[1;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[1;31m\]%s\[\e[m\])")]\[\e[0;36m\]\$\[\e[m\] '
+#user yok
+#PS1='[\[\e[1;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[1;31m\]%s\[\e[m\])")]\[\e[0;36m\]\$\[\e[m\] '
 #PS1='[\W$(__git_ps1 " (%s)")]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Tab completion for branch names
@@ -154,7 +157,10 @@ source ~/.git-completion.bash
 # Branch name in prompt
 source ~/.git-prompt.sh
 #PS1='[\W$(__git_ps1 " (%s)")]\$ '
+#user eklenmis
 PS1='[\[\e[1;32m\]\W\[\e[0m\]$(__git_ps1 " (\[\e[0;36m\]%s\[\e[0m\])")]\[\e[1;36m\]\$\[\e[0m\] '
+#user yok
+PS1='\e[0;35m\u\e[m[\[\e[1;32m\]\W\[\e[0m\]$(__git_ps1 " (\[\e[0;36m\]%s\[\e[0m\])")]\[\e[1;36m\]\$\[\e[0m\] '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Tab completion for branch names
 source ~/.git-completion.bash
