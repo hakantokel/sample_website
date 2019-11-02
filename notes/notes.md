@@ -140,7 +140,10 @@ source ~/.git-completion.bash
 # Git configuration
 # Branch name in prompt
 source ~/.git-prompt.sh
-PS1='[\[\e[1;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[1;31m\]%s\[\e[m\])")]\[\e[0;36m\]\$\[\e[m\] '
+#user eklenmis
+PS1='\e[0;35m\u\e[m[\[\e[1;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[1;31m\]%s\[\e[m\])")]\[\e[0;36m\]\$\[\e[m\] '
+#user yok
+#PS1='[\[\e[1;36m\]\W\[\e[m\]$(__git_ps1 " (\[\e[1;31m\]%s\[\e[m\])")]\[\e[0;36m\]\$\[\e[m\] '
 #PS1='[\W$(__git_ps1 " (%s)")]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Tab completion for branch names
@@ -154,7 +157,10 @@ source ~/.git-completion.bash
 # Branch name in prompt
 source ~/.git-prompt.sh
 #PS1='[\W$(__git_ps1 " (%s)")]\$ '
+#user eklenmis
 PS1='[\[\e[1;32m\]\W\[\e[0m\]$(__git_ps1 " (\[\e[0;36m\]%s\[\e[0m\])")]\[\e[1;36m\]\$\[\e[0m\] '
+#user yok
+PS1='\e[0;35m\u\e[m[\[\e[1;32m\]\W\[\e[0m\]$(__git_ps1 " (\[\e[0;36m\]%s\[\e[0m\])")]\[\e[1;36m\]\$\[\e[0m\] '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Tab completion for branch names
 source ~/.git-completion.bash
@@ -212,10 +218,10 @@ lg = !"git lg1"
 
 daha sonra bash i yeniden baslattiginda ilgili proje klasorunde log lari gormek icin
 
-``` git lg``` yazman yeterli
+```git lg``` yazman yeterli
 digerleri
-``` git lg1 ```
-```git lg2 ```
+```git lg1```
+```git lg2```
 
 
 
@@ -225,6 +231,7 @@ digerleri
 > ### Deleting untracked files
 
 ornegin
+
 ```console
 $ git status
 On branch master
@@ -259,6 +266,8 @@ To remove ignored and non-ignored files, run ```git clean -f -x``` or ```git cle
 
 > This command resets the Git history which can be potentially be dangerous. Hence, make sure that you are only altering commits that are not yet pushed to the remote repository so that other developer won’t face any problems.
 
+sadece dosya icerisinde yapilan degisiklikler var ise
+``` git checkout .``` ile bunu dizeltebilirsin.
 ***
 
  ### Git icin uygun bir anlatim videosu
