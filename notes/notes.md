@@ -260,6 +260,7 @@ To remove ignored and non-ignored files, run ```git clean -f -x``` or ```git cle
 > This command resets the Git history which can be potentially be dangerous. Hence, make sure that you are only altering commits that are not yet pushed to the remote repository so that other developer won’t face any problems.
 
 ***
+
  ### Git icin uygun bir anlatim videosu
 
 [Tom Preston-Werner - Mastering Git Basics](https://vimeo.com/17118008)
@@ -270,6 +271,7 @@ stage ile calisan dizin arasindaki fark ``git diff`` ile , commit ile stage aras
 
 
 ***
+
 ### Multiple ssh settings How to make
 
 bir bilgisayardan birden cok github hesabiyla calismak istiyorsun, git global de tanimli bir mail ve kullanici adin var ve normaldede ssh ile kendi hesabina baglanabiliyorsun. ``~/.ssh`` klasoru altinda iki dosyan var
@@ -607,209 +609,7 @@ config.reload_classes_only_on_change = false
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-# RVM
-
-***
-> ### Bu sayfa RVM in nasil kurulacagini anlatiyor
-[nasil kurulur](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-14-04-using-rvm)
-
----
----
-### ubuntu 16.04 icin rvm ve rails  kurulum
-
-you need an Ubuntu 16.04 server with a non-root user.
-
-```bash
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-
-cd /tmp
-
-curl -sSL https://get.rvm.io -o rvm.sh
-
-cat /tmp/rvm.sh | bash -s stable --rails
-```
-> bash i yeniden baslat ve boylece en son rails ruby yuklenmis olur
-
-### Install JavaScript Runtime
-
-[su sayfadan en son guncel nodejs yuklenebilinir](https://github.com/nodesource/distributions)
-yani soyle
-
-```bash
-\curl -sSL https://deb.nodesource.com/setup_12.x -o nodejs.sh
-
-cat /tmp/nodejs.sh | sudo -E bash -
-
-sudo apt-get update
-
-sudo apt-get install -y nodejs
-
-```
-
-vagrant icinde bu hata icin duzeltme yap
-```bash
-LANGUAGE = "en_US:en",
-    LC_ALL = (unset),
-    LC_TIME = "tr_TR.UTF-8",
-    LC_MONETARY = "tr_TR.UTF-8",
-    LC_CTYPE = "en_US.UTF-8",
-    LC_ADDRESS = "tr_TR.UTF-8",
-    LC_TELEPHONE = "tr_TR.UTF-8",
-    LC_NAME = "tr_TR.UTF-8",
-    LC_MEASUREMENT = "tr_TR.UTF-8",
-    LC_IDENTIFICATION = "tr_TR.UTF-8",
-    LC_NUMERIC = "tr_TR.UTF-8",
-    LC_PAPER = "tr_TR.UTF-8",
-    LANG = "en_US.UTF-8"
-```
-duzeltmek icin
-[bu sayfa](https://www.netinternet.com.tr/bilgi-bankasi/ubuntu-perl-warning-setting-locale-failed-problemi)
-```bash
-echo "export LC_CTYPE=en_US.UTF-8" >> ~/.bashrc
-echo "export LC_ALL=en_US.UTF-8" >> ~/.bashrc
-```
-Eğer zsh kullanıyorsanız yukarıda yer alan komutlarda ~/.bashrc yerine ~/.zshrc olarak düzenlemeniz yeterli olacaktır.
-
-### yarn yukle
-
-[bu sayfadan ubuntu 16.04 icin](https://yarnpkg.com/en/docs/install#debian-stable)
-
-```bash
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-```
-
-```bash
-sudo apt-get update && sudo apt-get install yarn
-```
----
----
-> **_rvm yuklendikten sonra_**
-
-> `` /etc/groups ``
-
->_icinde rvm in yanina kullanici adi yazilmasi gerekiyor_
-
-`` rvm:x:1003:vagrant:hakan ``
->_gibi._
-
-***
-
-> ### RVM tab completion
-
-put fallowing line to ```.bashrc``` file
-
-```console
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-```
-
-
-> ### Bazi RVM komutlari
-
-
-```bash
-$ rvm install 2.3.1 #ruby 2.3.1 i yukler
-
-$ rvm uninstall 2.3.1 # ruby 2.3.1 kaldirir
-
-$ rvm list  # yuklu ruby leri gosterir
-
-$ rvm list known # yuklenebilecek ruby leri gosterir
-
-$ rvm --default use 2.3.1 #2.3.1 versiyonunu default olrak kullanir
-
-$ rvm use 2.4.1 # gecici sure ruby 2.4.1 kullanir
-
-$ rvm use system # sistemde yuklu olan ruby versiyonunu kullanir
-
-$ rvm gemset list # ruby icerisindeki gemset leri listeler
-
-$ rvm gemset list_all # tum ruby lerdeki gemsetleri listeler
-
-$ rvm gemset create no_rails # no_rails isimli gemset olusturur
-
-$ rvm gemset empty no_rails # no_rails isimli gemset icerindeki gemleri siler
-
-$ rvm gemset delete no_rails # no_rails isimli gemset i siler
-
-$ rvm gemset use no_rails # no_rails gemset i kullanir (gecici)
-
-$ rvm use 2.5.3@no_rails --default #gemset i ve ruby versioyunu default olarak kullanir
-
-$ gem search '^rails$' --all #rails gemleri listeler
-
-$ gem install rails -v rails_version #rails_version yerine 5.2.2 yazilabilinir.
-
-
-
-```
-
-**onemli** Herhangi bir klasore girince ruby versiyonu degissin istiyorsan
-``.ruby-version`` dosyasinin icinde sadece ``2.5.3`` gibi versioyon yazmasi yeterli iken,
-hem ruby versioyn hem de gemset degissin istiyor isen ``.rvmrc`` dosyasinin icerinse
-``rvm 2.5.3@no_rails`` gibi yazilmasi gerekiyor. "no_rails" gemset icin belirledigin herhangi bir ad.
-
-***
-
-sadece kendi gemsetin icerisindeki gem leri listelemek ister isen
-
-```
-$ ls `rvm gemdir`/gems
-```
-
-if you want listing for gems dependency
-
-```
-$ gem dependency {gemname} --reverse-dependencies
-```
-
-> ### rvm guncellemek icin
-
-```console
-$ rvm get stable # rvm i gunceller
-```
-
-# RVM
-
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
-# SUBLIME
-
-***
-### Markdown dosyasinin renk ayari (sublime3)
-> herhangi bir md dosyasi sublime da acik iken
-
-Colorsublime adli eklenyiti kurulumali oncelikle. Sonro color sublime install den Wildlife-Night.tmTheme eklenmeli.
-
-`Preferences > Settings-syntax spesific`
-
-```JSON
-// These settings override both User and Default settings for the Markdown syntax
-{
-  "color_scheme": "Packages/Colorsublime - Themes/Wildlife-Night.tmTheme"
-}
-```
-> seklinde eklersen her md dosyasi acildiginda bu tema ile acilacaktir.
-
-***
-### Html in renk ayari
-```JSON
-// These settings override both User and Default settings for the HTML syntax
-{
-  "color_scheme": "Packages/Colorsublime - Themes/Darkside_light_selection.tmTheme",
-}
-```
-
-***
-### ``<% %>, <%= %>`` otomatik olarak erb dosayasina ekleme
-
-https://github.com/eddorre/SublimeERB
-
-`CTRL + SHIFT + .` <!-- erb dosyasinda calisirken yap -->
-
-***
-
-# SUBLIME
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 # VAGRANT
